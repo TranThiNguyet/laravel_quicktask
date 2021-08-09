@@ -23,14 +23,14 @@
             <div class="container">
                 <div class="navbar-header">
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ route('/') }}">
+                    <a class="navbar-brand" href="{{ route('home') }}">
                        {{ __('task_list') }}
                     </a>
                     <a href="{!! route('change-language', ['en']) !!}" class="navbar-brand">
-                        English
+                        {{ __('English') }}
                     </a>
                     <a href="{!! route('change-language', ['vi']) !!}" class="navbar-brand">
-                        Việt Nam 
+                        {{ __('Vietnamese') }} 
                     </a>
                 </div>
             </div> 

@@ -2,5 +2,11 @@
     "new_task": "Nhiệm vụ mới",
     "Task": "Nhiệm vụ",
     "add_task": "Thêm nhiệm vụ",
-    "task_list": "Danh sách công việc"
+    "task_list": "Danh sách công việc",
+    "current_tasks": "Nhiệm vụ hiện tại",
+    "create_successful_task": "Tạo nhiệm vụ thành công",
+    "Update": "Cập nhật",
+    "Delete": "Xóa",
+    "English": "Tiếng Anh",
+    "Vietnamese":"Tiếng Việt"
 }
