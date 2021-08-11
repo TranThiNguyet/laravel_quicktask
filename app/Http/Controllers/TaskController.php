@@ -34,4 +34,15 @@ class TaskController extends Controller
             'tasks' => $this->taskService->get()
         ]);
     }
+
+    public function destroy(Task $task)
+    {
+        $result = $task->delete();
+
+        if ($result) {
+                    return back()->withSuccess('message.delete_successful_task');
+                }
+        
+                return back()->withError('message.delete_fail_task');
+    }
 }
