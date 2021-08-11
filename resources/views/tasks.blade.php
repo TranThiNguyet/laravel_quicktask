@@ -10,14 +10,14 @@
                 </div>
                 <div class="panel-body">
                     <!-- New Task Form -->
-                    <form action="{{ route('tasks.store') }}" method="post" class="form-horizontal">
+                    <form action="{{isset($task) ? route('tasks.update',$task->id) : route('tasks.store') }}" method="post" class="form-horizontal">
                         @csrf
                         <!-- Task Name -->
                         <div class="form-group">
                             <label for="task-name" class="col-sm-3 control-label">{{ __('Task') }}</label>
 
                             <div class="col-sm-6">
-                                <input type="text" name="name" id="name" class="form-control" value="">
+                                <input type="text" name="name" id="name" class="form-control" value="{{ old('name',isset($task->name) ? $task->name : '')}}">
                             </div>
                         </div>
 
@@ -58,14 +58,14 @@
                                         </td>
 
                                         <td>
-                                            <!-- TODO: Delete Button -->
-                                            <a class="btn btn-primary btn-sm" href="">
-                                                <i class="fas fa-edit">{{ __('Update') }}</i>
-                                            </a>
-                                            <a href="#" class="btn btn-danger btn-sm"
-                                            onclick="">
-                                                <i class="fas fa-trash">{{ __('Delete') }}</i>
-                                            </a>
+                                            <form action="{{ route('tasks.destroy', ['task' => $task->id]) }}"
+                                                method="POST">
+                                                {{ csrf_field() }}
+                                                {{ method_field('DELETE') }}
+                                                <button type="submit" class="btn btn-danger">
+                                                    <i class="fa fa-btn fa-trash"></i>{{ __(' Delete') }}
+                                                </button>
+                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach
