@@ -2,5 +2,11 @@
     "new_task": "New Task",
     "Task": "Task",
     "add_task": "Add Task",
-    "task_list": "Task List"
+    "task_list": "Task List",
+    "current_tasks": "Current Tasks",
+    "create_successful_task": "Create successful task",
+    "Update": "Update",
+    "Delete": "Delete",
+    "English": "English",
+    "Vietnamese": "Vietnamese"
 }
